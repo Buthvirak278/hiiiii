@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Promo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdfdfd;
+      overflow-x: hidden;
+    }
+
+    /* Header Navigation */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+    }
+
+    .header a {
+      text-decoration: none;
+      margin: 0 5px;
+      color: #333;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .header .order-now {
+      background-color: #000;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    /* Main Section */
+    .promo-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .promo-text {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .promo-text h1 {
+      font-size: 36px;
+      color: #24a299;
+      margin-bottom: 10px;
+    }
+
+    .promo-text h2 {
+      font-size: 20px;
+      color: #f48024;
+      margin-bottom: 20px;
+    }
+
+    .promo-text p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .promo-text .order-button {
+      background-color: #000;
+      color: #fff;
+      padding: 10px 20px;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .promo-image {
+      width: 100%;
+      text-align: center;
+      position: relative;
+      margin-top: 20px;
+    }
+
+    .promo-image img {
+      border-radius: 50%;
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .promo-image .badge {
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #000;
+      color: #fff;
+      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    /* Navigation Arrows */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      font-weight: bold;
+      background-color: #eee;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .arrow.left {
+      left: 20px;
+    }
+
+    .arrow.right {
+      right: 20px;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+      }
+
+      .promo-text h1 {
+        font-size: 32px;
+      }
+
+      .promo-text h2 {
+        font-size: 18px;
+      }
+
+      .promo-text p {
+        font-size: 12px;
+      }
+
+      .promo-image img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    /* Small screens */
+    @media (max-width: 480px) {
+      .promo-text h1 {
+        font-size: 28px;
+      }
+
+      .promo-text h2 {
+        font-size: 16px;
+      }
+
+      .promo-text p {
+        font-size: 12px;
+      }
+
+      .promo-image img {
+        width: 180px;
+        height: 180px;
+      }
+
+      .promo-section {
+        padding: 20px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">
+      <h2 style="color: #24a299; margin: 0;">ចែរិទ្ធ</h2>
+    </div>
+    <nav>
+      <a href="sign-up.html">Menu</a>
+      <a href="sign-up.html">Account</a>
+      <a href="sign-up.html">Locations</a>
+      <a href="sign-up.html">Rewards</a>
+      <a href="sign-up.html">Gifts</a>
+      <a href="sign-up.html">Careers</a>
+      <a href="sign-up.html" class="order-now">Order Now</a>
+      <a href="log-in.html" class="order-now">login</a>
+      <a href="sign-up.html" class="order-now">Register</a>
+    </nav>
+  </div>
+
+  <div class="promo-section">
+    <div class="promo-text">
+      <h1>សូមស្វាមន៌🙏</h1> 
+      <h2>Welcome🙏</h2>
+      <p>សូមរីករាយក្នុងការជ្រើសរើសទិញមុខទំនិញដែរចង់ទិញ ដែរមានក្នុងហាងរបស់យើងខ្ញុំ។</p>
+      <button class="order-button">Order This</button>
+    </div>
+    <div class="promo-image">
+      <a href="#" class="arrow left" onclick="prevPage()">«</a>
+      <img id="carousel-image" src="https://commongrains.com/wp-content/uploads/2023/01/Is-Rice-A-Grain-Or-Seed.jpg" alt="អង្ករ">
+      <a href="#" class="arrow right" onclick="nextPage()">»</a>
+    </div>
+  </div>
+  
+  <script>
+      let currentIndex = 0;
+      const images = [
+          "="
+      ];
+  
+      function prevPage() {
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
+          updateImage();
+      }
+  
+      function nextPage() {
+          currentIndex = (currentIndex + 1) % images.length;
+          updateImage();
+      }
+  
+      function updateImage() {
+          document.getElementById('carousel-image').src = images[currentIndex];
+      }
+  
+      // Auto change image every 3 seconds
+      setInterval(nextPage, 3000);
+  </script>
+
+</body>
+</html>
